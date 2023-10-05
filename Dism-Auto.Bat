@@ -110,7 +110,11 @@ set /p YourDriveLetter=      (Example E)
 @echo.
 @echo.
 @ECHO ------------------------------------------------------------------------------------------
-@echo.
+@echo                                                                        ÜÜÜÜÜÜ
+@echo                                                                        ÚÄÄÄ¿Þ
+@echo                                                                        ³ û ³Þ
+@echo                                                                        ÀÄÄÄÙÞ
+@echo                                                                        ßßßßßß                                                                 
 @echo So System Is "%Drive%:\" And Your CD/USB Is "%YourDriveLetter%:\"
 @echo.
 @echo If You Sure Press [Y] To Continue If Its Not Correct Press [N] To Change It
