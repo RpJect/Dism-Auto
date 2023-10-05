@@ -1,6 +1,6 @@
 @TITLE ::::::::::::::::::::::::::::::::::::::::::::::: DISM AUTO :::::::::::::::::::::::::::::::::::::::::::::::
-@color 0f
-REM This Software is created By Rproject
+
+REM This Software is created By RpJect
 REM https://github.com/RpJect/Dism-Auto
 REM
 REM This Program Is Using Microsoft Windows DISM.
@@ -8,8 +8,17 @@ REM To Fix All Your Proplem type.
 REM
 REM The Software version 1.0
 :1st
+@color 02
 @cls
 @ECHO OFF
+
+:: This Software is created By RpJect
+:: https://github.com/RpJect/Dism-Auto
+::
+:: This Program Is Using Microsoft Windows DISM.
+:: To Fix All Your Proplem type.
+::
+:: The Software version 1.0
 @echo.
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
@@ -17,28 +26,30 @@ REM The Software version 1.0
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
 @echo.
-@ECHO                         This Software is created By Rproject.
+@ECHO                         This Software is created By RpJect.
 @echo                                DISM AUTO version 1.0
 @ECHO                      This Program Is Using Microsoft Windows DISM.
 @ECHO                  Before We Start And help your computer to Get Fixed.
 @echo.
-@echo.                                   Work For Windows10
+@echo.                                 Work For Windows10
 @echo.
 @echo.
 @echo.
+@echo                         1- Find Your system Drive And Your USB/CD
+@ECHO                            type A Letter Like "C:"
+@echo                            To Make Sure Type "Dir"
+@echo.                              
+@ECHO.                        2- Choose Yor Mode                              
 @echo.
-@ECHO                      Please type the Letter OF Your system Drive
+@echo.                 We Recommended You To Open This Software In Safemode
 @echo.
 @echo.
-@ECHO                         To Make Sure By Typing C: Then Dir
+@echo Type "S" To Get In To Safemode "Recommended"
 @echo.
-@echo.                   We Recommended You To Open This Software In Safemode
-@echo.
-@echo Type Safe "S" To start In Safemode
-@echo Or 
-set/p   Mode="Type Y To Continue: "
+@echo And 
+set/p   Mode="Type "Y" To Continue: "
 if %Mode%==y goto 2nd
-if %Mode%==y goto 2nd
+if %Mode%==Y goto 2nd
 if %Mode%==Safe goto S
 if %Mode%==safe goto S
 if %Mode%==S goto S
@@ -56,6 +67,7 @@ shutdown.exe /r /o
 
 
 :2nd
+@color 02
 @cls
 @ECHO OFF
 @echo.
@@ -65,20 +77,19 @@ shutdown.exe /r /o
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
 @echo.
-@ECHO                         This Software is created By Rproject.
+@ECHO                         This Software is created By RpJect.
 @echo                                DISM AUTO version 1.0
 @ECHO                      This Program Is Using Microsoft Windows DISM.
 @ECHO                  Before We Start And help your computer to Get Fixed.
 @echo.
-@echo.                                   Work For Windows10
+@echo.                                 Work For Windows10
 @echo.
 @echo.
 @echo.
 @echo.
-@ECHO                      Please type the Letter OF Your system Drive
+@ECHO                      Please type The Letter OF Your system Drive
 @echo.
-@echo.
-@ECHO                         To Make Sure By Typing C: Then Dir
+@echo.                         
 @echo.
 @echo.                   We Recommended You To Open This Software In Safemode
 @echo.
@@ -101,23 +112,24 @@ set /p YourDriveLetter=      (Example E)
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
 @echo.
-@ECHO                         This Software is created By Rproject.
+@ECHO                         This Software is created By RpJect.
 @echo                                DISM AUTO version 1.0
 @ECHO                      This Program Is Using Microsoft Windows DISM.
-@ECHO                  Before We Start And help your computer to Get Fixed.
+@ECHO.                  
 @echo.
-@echo.                                   Work For Windows10
-@echo.
+@echo.                                 Work For Windows10
+
 @echo.
 @ECHO ------------------------------------------------------------------------------------------
 color 1F
-@echo                                                                        
-@echo                                                                         
-@echo                               almost ready                                                    
-@echo                                                                       
-@echo *********************************************************************                                                                                                                                       
-@echo * So System Is "%Drive%:\" And Your CD/USB Is "%YourDriveLetter%:\" *
-@echo *********************************************************************
+@echo.                                                                        
+                                                                        
+@echo                                     almost ready                                                    
+@echo.                                                                       
+@echo                   ***********************************************                                                                                                                                       
+@echo                   So System Is "%Drive%:\" And Your CD/USB Is "%YourDriveLetter%:\" 
+@echo.
+@echo                   ***********************************************
 @echo.
 @echo.
 @echo If You Sure Type [Y] To Continue If Its Not Correct Type [N] To Change It
@@ -147,7 +159,7 @@ MKDir "%Drive%:/temp
 
 :Mor1
 ECHO @ECHO OFF ^& CLS ^& NET SESSION ^>NUL 2^>^&1       >> "%Drive%:/temp\mor1.cmd
-ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor1.cmd
+ECHO @REM This Software is created By RpJect.  >> "%Drive%:/temp\mor1.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor1.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor1.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor1.cmd
@@ -160,7 +172,7 @@ ECHO START /MIN "Uninstall" "CMD.EXE" /C RD /S /Q "%Drive%:/temp"        >> "%Dr
 
 :Mor2
 ECHO @ECHO OFF ^& CLS ^& NET SESSION ^>NUL 2^>^&1       >> "%Drive%:/temp\mor2.cmd
-ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor2.cmd
+ECHO @REM This Software is created By RpJect.  >> "%Drive%:/temp\mor2.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor2.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor2.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor2.cmd
@@ -172,7 +184,7 @@ ECHO START /MIN "Uninstall" "CMD.EXE" /C RD /S /Q "%Drive%:/temp"        >> "%Dr
 
 :Mor3
 ECHO @ECHO OFF ^& CLS ^& NET SESSION ^>NUL 2^>^&1       >> "%Drive%:/temp\mor3.cmd
-ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor3.cmd
+ECHO @REM This Software is created By RpJect.  >> "%Drive%:/temp\mor3.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor3.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor3.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor3.cmd
@@ -186,7 +198,7 @@ ECHO START /MIN "Uninstall" "CMD.EXE" /C RD /S /Q "%Drive%:/temp"        >> "%Dr
 
 :Mor4
 ECHO @ECHO OFF ^& CLS ^& NET SESSION ^>NUL 2^>^&1       >> "%Drive%:/temp\mor4.cmd
-ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor4.cmd
+ECHO @REM This Software is created By RpJect.  >> "%Drive%:/temp\mor4.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor4.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor4.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor4.cmd
