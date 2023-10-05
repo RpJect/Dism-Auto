@@ -250,7 +250,7 @@ if %cho%==e goto E
 
 start "CMD.EXE" "c:/temp\mor1.cmd" 
 
-@pause
+
 
 @exit
 
@@ -261,7 +261,7 @@ start "CMD.EXE" "c:/temp\mor1.cmd"
 start "CMD.EXE" "c:/temp\mor2.cmd" 
 
 
-@pause
+
 
 @exit
 
@@ -272,7 +272,7 @@ start "CMD.EXE" "c:/temp\mor2.cmd"
 
 start "CMD.EXE" "c:/temp\mor3.cmd" 
 
-@pause
+
 
 @exit
 
@@ -283,7 +283,7 @@ start "CMD.EXE" "c:/temp\mor3.cmd"
 
 start "CMD.EXE" "c:/temp\mor4.cmd" 
 
-@pause
+
 
 @exit
 
