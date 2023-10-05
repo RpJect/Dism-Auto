@@ -144,7 +144,7 @@ ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor1.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor1.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor1.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor1.cmd
-ECHO @ECHO DISM /Online /Cleanup-Image /RestoreHealth /Source:%Drive%:\ESD\Windows\sources\install.ESD   >> "%Drive%:/temp\mor1.cmd
+ECHO @START /B /W DISM /Online /Cleanup-Image /RestoreHealth /Source:%Drive%:\ESD\Windows\sources\install.ESD   >> "%Drive%:/temp\mor1.cmd
 ECHO @ECHO Good Jop The Fix is Done    >> "%Drive%:/temp\mor1.cmd
 ECHO @pause    >> "%Drive%:/temp\mor1.cmd
 ECHO ECHO. ^& ECHO Clean Complete! >> "%Drive%:/temp\mor1.cmd
@@ -157,7 +157,7 @@ ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor2.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor2.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor2.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor2.cmd
-ECHO @ECHO dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%Drive%:\windows /scratchdir:%Drive%:\temp   >> "%Drive%:/temp\mor2.cmd
+ECHO @START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%Drive%:\windows /scratchdir:%Drive%:\temp   >> "%Drive%:/temp\mor2.cmd
 ECHO @ECHO Good Jop The Fix is Done    >> "%Drive%:/temp\mor2.cmd
 ECHO @pause    >> "%Drive%:/temp\mor2.cmd
 ECHO ECHO. ^& ECHO Clean Complete! >> "%Drive%:/temp\mor2.cmd
@@ -169,8 +169,8 @@ ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor3.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor3.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor3.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor3.cmd
-ECHO @ECHO dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%Drive%:\windows /scratchdir:%Drive%:\temp   >> "%Drive%:/temp\mor3.cmd
-ECHO @ECHO sfc /scannow /offbootdir=%Drive%\ /offwindir=%Drive%\windows    >> "%Drive%:/temp\mor3.cmd
+ECHO @START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%Drive%:\windows /scratchdir:%Drive%:\temp   >> "%Drive%:/temp\mor3.cmd
+ECHO @START /B /W sfc /scannow /offbootdir=%Drive%\ /offwindir=%Drive%\windows    >> "%Drive%:/temp\mor3.cmd
 ECHO @ECHO Good Jop The Fix is Done    >> "%Drive%:/temp\mor3.cmd
 ECHO @pause    >> "%Drive%:/temp\mor3.cmd
 ECHO ECHO. ^& ECHO Clean Complete! >> "%Drive%:/temp\mor3.cmd
@@ -183,8 +183,8 @@ ECHO @REM This Software is created By Rproject  >> "%Drive%:/temp\mor4.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor4.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor4.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor4.cmd
-ECHO @ECHO dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.wim    >> "%Drive%:/temp\mor4.cmd
-ECHO @ECHO dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.esd    >> "%Drive%:/temp\mor4.cmd
+ECHO @START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.wim    >> "%Drive%:/temp\mor4.cmd
+ECHO @START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.esd    >> "%Drive%:/temp\mor4.cmd
 ECHO @ECHO Good Jop The Fix is Done    >> "%Drive%:/temp\mor4.cmd
 ECHO @pause    >> "%Drive%:/temp\mor4.cmd
 ECHO ECHO. ^& ECHO Clean Complete! >> "%Drive%:/temp\mor4.cmd
