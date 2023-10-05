@@ -110,14 +110,17 @@ set /p YourDriveLetter=      (Example E)
 @echo.
 @echo.
 @ECHO ------------------------------------------------------------------------------------------
-@echo                                                                        ÜÜÜÜÜÜ
-@echo                                                                        ÚÄÄÄ¿Þ
-@echo                                                                        ³ û ³Þ
-@echo                                                                        ÀÄÄÄÙÞ
-@echo                                                                        ßßßßßß                                                                 
-@echo So System Is "%Drive%:\" And Your CD/USB Is "%YourDriveLetter%:\"
+color 1F
+@echo                                                                        
+@echo                                                                         
+@echo                               almost ready                                                    
+@echo                                                                       
+@echo *********************************************************************                                                                                                                                       
+@echo * So System Is "%Drive%:\" And Your CD/USB Is "%YourDriveLetter%:\" *
+@echo *********************************************************************
 @echo.
-@echo If You Sure Press [Y] To Continue If Its Not Correct Press [N] To Change It
+@echo.
+@echo If You Sure Type [Y] To Continue If Its Not Correct Type [N] To Change It
 @echo.
 @echo.To Exit Type [E]
 @echo.
@@ -198,7 +201,7 @@ ECHO START /MIN "Uninstall" "CMD.EXE" /C RD /S /Q "%Drive%:/temp"        >> "%Dr
 
 
 :R
-@color 1f
+@color 0f
 @cls
 @echo.
 @echo.
