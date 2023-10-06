@@ -45,8 +45,8 @@ REM The Software version 1.0
 @echo.
 @echo.
 @echo Type "S" To Get In To Safemode "Recommended"
-@echo.
 @echo And 
+timeout /t 2 /nobreak > NUL
 set/p   Mode="Type "Y" To Continue: "
 if %Mode%==y goto 2nd
 if %Mode%==Y goto 2nd
