@@ -131,12 +131,13 @@ echo.
 )
 
 :L
-@ECHO Type (R) To Retype Or Press Enter To Continue
+@ECHO Type (R) To Retype Or Type (Y) To Continue Without CD\USB
 set /p TYPO=
-if %TYPO%==r goto CD
-if %TYPO%==R goto CD
+if %TYPO%==r goto CD 
+if %TYPO%==R goto CD 
+if %TYPO%==Y goto 3rd
+if %TYPO%==y goto 3rd
 pasue
-goto 3rd
 :CD
 @color 02
 @cls
