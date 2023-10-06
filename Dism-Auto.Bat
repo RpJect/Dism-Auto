@@ -135,9 +135,8 @@ echo.
 set /p TYPO=
 if %TYPO%==r goto CD
 if %TYPO%==R goto CD
-
 pasue
-
+goto 3rd
 :CD
 @color 02
 @cls
@@ -177,7 +176,9 @@ IF EXIST %YourDriveLetter%:\sources (
 echo.
 timeout /t 2 /nobreak > NUL
     echo Your CD/USB Is Not %YourDriveLetter%:\
-
+goto L 
+	
+)
 @echo.
 @echo.
 @ECHO. ----------------------------------------------------------------------------------------
