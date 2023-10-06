@@ -97,13 +97,31 @@ shutdown.exe /r /o
 @echo. 
 set/p   Drive="Type Your System Source Drive: "
 
+IF EXIST %Drive%:\Windows\sources (
+    goto p
+) ELSE (
+    echo Your System Source Drive Is Not %Drive%:\
+	pause
+	goto 2nd 
+	
+)
+
 :p
 @ECHO. ----------------------------------------------------------------------------------------
 @ECHO    Please type the Letter OF Your CD/USB Drive
 set /p YourDriveLetter=      (Example E)
+IF EXIST %YourDriveLetter%:\sources (
+    goto 3rd
+) ELSE (
+    echo Your CD/USB Is Not %YourDriveLetter%:\ 
+	pause
+	goto p
+)
+
 @echo.
 @echo.
 @ECHO. ----------------------------------------------------------------------------------------
+:3rd
 @cls
 @echo.
 @echo.  ***************************************************************************************
@@ -123,7 +141,6 @@ set /p YourDriveLetter=      (Example E)
 @ECHO ------------------------------------------------------------------------------------------
 color 1F
 @echo.                                                                        
-                                                                        
 @echo                                     almost ready                                                    
 @echo.                                                                       
 @echo                   ***********************************************                                                                                                                                       
@@ -132,7 +149,7 @@ color 1F
 @echo                   ***********************************************
 @echo.
 @echo.
-@echo If You Sure Type [Y] To Continue If Its Not Correct Type [N] To Change It
+@echo If You Sure Type [Y] To Continue If You Want To Make Changes Type [N] To Change It
 @echo.
 @echo.To Exit Type [E]
 @echo.
@@ -202,12 +219,16 @@ ECHO @REM This Software is created By RpJect.  >> "%Drive%:/temp\mor4.cmd
 ECHO @REM https://github.com/RpJect/Dism-Auto  >> "%Drive%:/temp\mor4.cmd
 ECHO @REM This Program Is Using Microsoft Windows DISM  >> "%Drive%:/temp\mor4.cmd
 ECHO @SETLOCAL  >> "%Drive%:/temp\mor4.cmd
-ECHO @START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.wim    >> "%Drive%:/temp\mor4.cmd
-ECHO @START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.esd    >> "%Drive%:/temp\mor4.cmd
+ECHO IF EXIST %YourDriveLetter%:\sources\install.wim (          >> "%Drive%:/temp\mor4.cmd
+ECHO     START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.wim          >> "%Drive%:/temp\mor4.cmd
+ECHO ) ELSE (          >> "%Drive%:/temp\mor4.cmd
+ECHO     START /B /W dism /image:%Drive%:\ /cleanup-image /restorehealth /source:%YourDriveLetter%:\sources\install.esd          >> "%Drive%:/temp\mor4.cmd
+ECHO )          >> "%Drive%:/temp\mor4.cmd
 ECHO @ECHO Good Jop The Fix is Done    >> "%Drive%:/temp\mor4.cmd
 ECHO @pause    >> "%Drive%:/temp\mor4.cmd
 ECHO ECHO. ^& ECHO Clean Complete! >> "%Drive%:/temp\mor4.cmd
 ECHO START /MIN "Uninstall" "CMD.EXE" /C RD /S /Q "%Drive%:/temp"        >> "%Drive%:/temp\mor4.cmd
+
 
 
 
