@@ -177,10 +177,6 @@ IF EXIST %YourDriveLetter%:\sources (
 echo.
 timeout /t 2 /nobreak > NUL
     echo Your CD/USB Is Not %YourDriveLetter%:\
-echo.
-	goto L 
-	
-)
 
 @echo.
 @echo.
