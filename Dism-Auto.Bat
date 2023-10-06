@@ -1,5 +1,6 @@
 @TITLE ::::::::::::::::::::::::::::::::::::::::::::::: DISM AUTO :::::::::::::::::::::::::::::::::::::::::::::::
-
+@color 02
+@ECHO OFF
 REM This Software is created By RpJect
 REM https://github.com/RpJect/Dism-Auto
 REM
@@ -7,10 +8,6 @@ REM This Program Is Using Microsoft Windows DISM.
 REM To Fix All Your Proplem type.
 REM
 REM The Software version 1.0
-:1st
-@color 02
-@cls
-@ECHO OFF
 
 :: This Software is created By RpJect
 :: https://github.com/RpJect/Dism-Auto
@@ -19,6 +16,17 @@ REM The Software version 1.0
 :: To Fix All Your Proplem type.
 ::
 :: The Software version 1.0
+
+
+@echo off
+
+if "%SAFEBOOT_OPTION%"=="" goto normal
+
+echo This computer is in safe mode!
+
+goto 2nd
+
+:normal
 @echo.
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
@@ -29,11 +37,9 @@ REM The Software version 1.0
 @ECHO                         This Software is created By RpJect.
 @echo                                DISM AUTO version 1.0
 @ECHO                      This Program Is Using Microsoft Windows DISM.
-@ECHO                  Before We Start And help your computer to Get Fixed.
-@echo.
 @echo.                                 Work For Windows10
 @echo.
-@echo.
+@ECHO                  Before We Start And help your computer to Get Fixed.
 @echo.
 @echo                         1- Find Your system Drive And Your USB/CD
 @ECHO                            type A Letter Like "C:"
@@ -45,9 +51,9 @@ REM The Software version 1.0
 @echo.
 @echo.
 @echo Type "S" To Get In To Safemode "Recommended"
-@echo And 
-timeout /t 2 /nobreak > NUL
-set/p   Mode="Type "Y" To Continue: "
+@echo OR 
+timeout /t 3 /nobreak > NUL
+set/p   Mode="Type "Y" To Continue In Normalmode: "
 if %Mode%==y goto 2nd
 if %Mode%==Y goto 2nd
 if %Mode%==Safe goto S
@@ -64,6 +70,7 @@ if %Mode%==s goto S
 :S
 shutdown.exe /r /o
 
+Exit
 
 
 :2nd
@@ -97,9 +104,10 @@ shutdown.exe /r /o
 @echo. 
 set/p   Drive="Type Your System Source Drive: "
 
-IF EXIST %Drive%:\Windows\sources (
+IF EXIST %Drive%:\Windows (
     goto p
 ) ELSE (
+timeout /t 2 /nobreak > NUL
     echo Your System Source Drive Is Not %Drive%:\
 	pause
 	goto 2nd 
@@ -110,12 +118,68 @@ IF EXIST %Drive%:\Windows\sources (
 @ECHO. ----------------------------------------------------------------------------------------
 @ECHO    Please type the Letter OF Your CD/USB Drive
 set /p YourDriveLetter=      (Example E)
+
 IF EXIST %YourDriveLetter%:\sources (
     goto 3rd
 ) ELSE (
-    echo Your CD/USB Is Not %YourDriveLetter%:\ 
-	pause
-	goto p
+echo.
+timeout /t 2 /nobreak > NUL
+    echo Your CD/USB Is Not %YourDriveLetter%:\
+echo.
+	goto L 
+	
+)
+
+:L
+@ECHO Type (R) To Retype Or Press Enter To Continue
+set /p TYPO=
+if %TYPO%==r goto CD
+if %TYPO%==R goto CD
+
+pasue
+
+:CD
+@color 02
+@cls
+@ECHO OFF
+@echo.
+@echo.  ***************************************************************************************
+@echo.  ***************************************************************************************
+@ECHO.  **************************** Fix The PC Using DISM METHIODS ***************************
+@echo.  ***************************************************************************************
+@echo.  ***************************************************************************************
+@echo.
+@ECHO                         This Software is created By RpJect.
+@echo                                DISM AUTO version 1.0
+@ECHO                      This Program Is Using Microsoft Windows DISM.
+@ECHO                  Before We Start And help your computer to Get Fixed.
+@echo.
+@echo.                                 Work For Windows10
+@echo.
+@echo.
+@echo.
+@echo.
+@ECHO                      Please type The Letter OF Your system Drive
+@echo.
+@echo.                         
+@echo.
+@echo.                   We Recommended You To Open This Software In Safemode
+@echo.
+@echo.
+@echo. 
+@ECHO. ----------------------------------------------------------------------------------------
+@ECHO    Please type the Letter OF Your CD/USB Drive
+set /p YourDriveLetter=      (Example E)
+
+IF EXIST %YourDriveLetter%:\sources (
+    goto 3rd
+) ELSE (
+echo.
+timeout /t 2 /nobreak > NUL
+    echo Your CD/USB Is Not %YourDriveLetter%:\
+echo.
+	goto L 
+	
 )
 
 @echo.
