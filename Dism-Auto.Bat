@@ -84,21 +84,20 @@ Exit
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
 @echo.
-@ECHO                         This Software is created By RpJect.
-@echo                                DISM AUTO version 1.0
-@ECHO                      This Program Is Using Microsoft Windows DISM.
-@ECHO                  Before We Start And help your computer to Get Fixed.
+@ECHO                           This Software is created By RpJect.
+@echo                                   DISM AUTO version 1.0
+@ECHO                       This Program Is Using Microsoft Windows DISM.
+@ECHO                   Before We Start And help your computer to Get Fixed.
+@echo.                                  Work For Windows10
 @echo.
-@echo.                                 Work For Windows10
+@echo.                   We Recommended You To Open This Software In Safemode
+@echo                                      Or Live CD/USB
 @echo.
 @echo.
-@echo.
-@echo.
-@ECHO                      Please type The Letter OF Your system Drive
+@ECHO                      Please type The Letter OF Your System Drive
 @echo.
 @echo.                         
 @echo.
-@echo.                   We Recommended You To Open This Software In Safemode
 @echo.
 @echo.
 @echo. 
@@ -149,22 +148,20 @@ pasue
 @echo.  ***************************************************************************************
 @echo.  ***************************************************************************************
 @echo.
-@ECHO                         This Software is created By RpJect.
-@echo                                DISM AUTO version 1.0
-@ECHO                      This Program Is Using Microsoft Windows DISM.
-@ECHO                  Before We Start And help your computer to Get Fixed.
-@echo.
-@echo.                                 Work For Windows10
-@echo.
-@echo.
-@echo.
-@echo.
-@ECHO                      Please type The Letter OF Your system Drive
-@echo.
-@echo.                         
+@ECHO                          This Software is created By RpJect.
+@echo                                  DISM AUTO version 1.0
+@ECHO                        This Program Is Using Microsoft Windows DISM.
+@ECHO                   Before We Start And help your computer to Get Fixed.
+@echo.                                  Work For Windows10
 @echo.
 @echo.                   We Recommended You To Open This Software In Safemode
+@echo                                      Or Live CD/USB
 @echo.
+@echo.
+@echo.
+@ECHO                        Please type the Letter OF Your CD/USB Drive
+@echo.
+@echo.                         
 @echo.
 @echo. 
 @ECHO. ----------------------------------------------------------------------------------------
@@ -195,10 +192,10 @@ goto L
 @ECHO                         This Software is created By RpJect.
 @echo                                DISM AUTO version 1.0
 @ECHO                      This Program Is Using Microsoft Windows DISM.
-@ECHO.                  
+@echo.                                  Work For Windows10
 @echo.
-@echo.                                 Work For Windows10
-
+@echo.                   We Recommended You To Open This Software In Safemode
+@echo                                      Or Live CD/USB
 @echo.
 @ECHO ------------------------------------------------------------------------------------------
 color 1F
